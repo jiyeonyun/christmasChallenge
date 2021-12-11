@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="card" id="card">
+            <p id="greeting-display"></p>
+            <span id="from">from.</span>
+        </div>
+        <button id="btn">Write random card</button>
+        <form action="" class="customForm">
+            <span class='notice'>if you want custtomMessage, write form and enter!!</span>
+        <span>from<input type="text" id="fromWho" onchange='printName()'/></span>
+        <span>text customMessage!!
+        <input type="text" id="customMessage" onchange='printMessage()'></span>
+    </form>
+        <script src="main.js"></script>
+    </body>
+</html>
