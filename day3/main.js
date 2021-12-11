@@ -21,5 +21,3 @@ btn.addEventListener('click',()=>{
 // - Add an extra theme, and the option to switch between them.
 // - Change the message and theme to a New Year’s one automatically on December 31st.
 
-
-
