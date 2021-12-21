@@ -1,4 +1,4 @@
-const inputs = document.querySelectorAll(".controls input");
+
 const eye = document.querySelector('.eye');
 const nose = document.querySelector('.nose');
 const button = document.querySelector('.button');
@@ -10,7 +10,16 @@ const color3 = document.querySelector('#color3');
 // Write a function to update the snowman colors
 // according to the colors selected from the pickers.
 
+const inputs = document.querySelectorAll(".controls input");
 
+function handleUpdate() {
+  document.documentElement.style.setProperty(
+    `--${this.name}`,
+    this.value
+  );
+}
+
+inputs.forEach(input => input.addEventListener("change", handleUpdate));
 
 // Stretch goals:
 // - Add other items eg scarf, arms, etc.
