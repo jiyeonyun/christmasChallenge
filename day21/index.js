@@ -3,6 +3,7 @@ const select = document.getElementById("select")
 const time = document.getElementById("time")
 let currentLocation = ""
 let timeTaken = 0
+const btn = document.querySelector('.calculate');
 
 let destination = [
     {
@@ -34,13 +35,13 @@ let destination = [
 function calculateSpeed() {
     let speed = 0    
     currentLocation = select.value;
-    timeTaken= timeTaken.value;
-    let indexnum = destination.findIndex(i => i.name == "currentLocation"); 
-    console.log(indexnum);
-    let SpeedCalculate =  destination[indexnum].distanceFromPrevDestination / timeTaken;
+    timeTaken= time.value;
+    let indexnum = destination.findIndex(i => i.name == currentLocation); 
+    let SpeedCalculate =  (destination[indexnum].distanceFromPrevDestination) / timeTaken;
     speedometer.innerText = SpeedCalculate;
     }
-    calculateSpeed();
+
+   btn.addEventListener('click',calculateSpeed);
     // Task:
     // - Retrieve distance from previous destination from array of objects.
     // - Calculate speed and round speed to an integer (whole number).
