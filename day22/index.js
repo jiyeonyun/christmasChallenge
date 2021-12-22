@@ -3,21 +3,23 @@ let timer = document.getElementById("timer")
 let affirmation = document.getElementById("affirmation")
 let timeout;
 
-var time = 900;
+var time = 60;
 var min = '';
 var sec = '';
 
 // Task:
 // - Write a function to start the countdown timer on the button click and display it in the DOM. Stop the timer when it reaches 0.
 function timerr(){
-   setInterval(() => {
+  let x =  setInterval(() => {
     min = parseInt(time/60);
     sec = time%60;
     timer.innerHTML = min + ":" + sec;
     time--;
     
-    if(time<0){
-        clearInterval();
+    if(time===0){
+        clearInterval(x);
+
+        timer.innerHTML ="00:00";
     }
    },1000);
 }
