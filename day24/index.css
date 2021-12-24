@@ -1,0 +1,64 @@
+:root {
+    --wine-red: #C7375F;
+    --bright-red: #D42D2F;
+    --dark-green: #344D2F;
+    --light-green: #77A047;
+    --gold: #FAC57D;
+    --snow: #F0F4F7;
+  }
+  
+  html, body {
+      margin: 0;
+      padding: 0;
+  }
+  
+  body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: var(--dark-green);
+      background-color: var(--snow);
+  }
+  
+  .launchpad {
+      display: flex;
+      justify-content: center;
+      align-items:  center;
+      margin: 2em;
+      flex-direction: column;
+      min-width: 100px;
+      min-height: 100px;
+      background: var(--gold);
+      padding: 1em 2em;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+  
+  .crew {
+      font-size: 30px;
+  }
+  
+  button {
+      padding: 1em 2em;
+      border: none;
+      font-size: 1.2rem;
+      background-color: var(--dark-green);
+      color: var(--snow);
+      border-radius: 999px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+  
+  button:hover {
+      cursor: pointer;
+      transform: scale(1.03)
+  }
+  
+  .slide-out-blurred-left{-webkit-animation:slide-out-blurred-left .45s cubic-bezier(.755,.05,.855,.06) both;animation:slide-out-blurred-left .45s cubic-bezier(.755,.05,.855,.06) both}
+
+@-webkit-keyframes slide-out-blurred-left{0%{-webkit-transform:translateX(0) scaleY(1) scaleX(1);transform:translateX(0) scaleY(1) scaleX(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-filter:blur(0);filter:blur(0);opacity:1}100%{-webkit-transform:translateX(-1000px) scaleX(2) scaleY(.2);transform:translateX(-1000px) scaleX(2) scaleY(.2);-webkit-transform-origin:100% 50%;transform-origin:100% 50%;-webkit-filter:blur(40px);filter:blur(40px);opacity:0}}@keyframes slide-out-blurred-left{0%{-webkit-transform:translateX(0) scaleY(1) scaleX(1);transform:translateX(0) scaleY(1) scaleX(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-filter:blur(0);filter:blur(0);opacity:1}100%{-webkit-transform:translateX(-1000px) scaleX(2) scaleY(.2);transform:translateX(-1000px) scaleX(2) scaleY(.2);-webkit-transform-origin:100% 50%;transform-origin:100% 50%;-webkit-filter:blur(40px);filter:blur(40px);opacity:0}}
+  /* 
+  Task: 
+  - Write the CSS required to launch Santa and his sleigh. Check out this cool animation generator: https://animista.net/play/exits/ */
